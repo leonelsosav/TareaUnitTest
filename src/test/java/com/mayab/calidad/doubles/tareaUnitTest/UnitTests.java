@@ -94,7 +94,7 @@ public class UnitTests {
 		cuenta = new Cuenta(holder, balance, zone, alertas,dbs);
 		cuenta.debit(5000);
 		cuenta.debit(500);
-		cuenta.debit(700);
+		cuenta.credit(700);
 		double expected = cuenta.getZone()*(5000+500+700)*.01;
 		assertThat(expected, is(cuenta.comisionesTotales()));
 	}

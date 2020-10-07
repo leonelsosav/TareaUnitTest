@@ -41,6 +41,7 @@ public class Cuenta {
 
     void credit(int balance) {
         this.balance += balance;
+        db.guardarTransaccion(balance);
     }
     
     void setAlertListener(Alert listener){
